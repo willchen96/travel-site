@@ -1,16 +1,32 @@
 .site-header {
     position: absolute;
-    
     z-index: 2;
     width: 100%;
     padding: 10px 0;
+    transition: opacity 0.3s ease-out;
 
-    @mixin atMedium {
-        background-color: rgba(47, 85, 114, .3);
+    &--background {
+
+        @mixin atMedium {
+            background-color: rgba(47, 85, 114, .3);
+        }
+        
+        &--visible {
+            background-color: rgba(47, 85, 114, .5);
+        }
+        
     }
 
+    
+
     &__btn-container {
-        float: right;
+        text-align: center;
+        margin-top: 90px;
+
+        @mixin atMedium {
+            float: right;
+            margin-top: 0px;
+        }
     }
 
     &__logo {
@@ -29,23 +45,88 @@
     }
 
     &__menu-icon {
-        width: 20px;
-        height: 20px;
-        background-color: white;
+        
         position: absolute;
         top: 10px;
         right: 10px;
+        
         @mixin atMedium {
             display: none;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top:0;
+            right:0;
+            background-color: white;
+            width: 25px;
+            height: 3px;
+            transition: transform 0.3s ease-out;
+        }
+
+        &__middle-bar {
+            position: absolute;
+            top:10px;
+            right:0;
+            background-color: white;
+            width: 25px;
+            height: 3px;
+            transition: opacity 0.3s ease-out;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top:20px;
+            right:0;
+            background-color: white;
+            width: 25px;
+            height: 3px;
+            transition: transform 0.3s ease-out;
         }
 
     }
 
+    &__menu-icon--close {
+
+
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+            top: 10px;
+            transition:  0.1s;
+
+        }
+        
+        .site-header__menu-icon__middle-bar {
+            opacity: 0;
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25);
+            top: 10px;
+            transition:  0.1s;
+        }
+    }
+    
+
     &__menu-content {
-        display: none;
+        opacity: 0;
+        z-index: -10;
+        transition: all 0.3s ease-out;
+        transform: scale(1.5);
+
+        &--visible {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+        }
 
         @mixin atMedium {
-            display: block;
+            z-index: 1;
+            opacity: 1;
+            transform: scale(1);
         }
     }
 }
