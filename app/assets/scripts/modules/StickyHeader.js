@@ -32,9 +32,6 @@ export default class StickyHeader {
                     return
                 }
 
-                console.log(entry.intersectionRatio)
-                console.log(entry.target)
-                console.log(entry.target.id)
                 if (entry.target.id != '') {
                     const link = entry.target.getAttribute('data-matching-link')
                     document.querySelector(link).classList.add('highlight')
