@@ -49,6 +49,13 @@
 
         @mixin atMedium {
             background-color: transparent;
+            &.highlight {
+                color: $mainOrange;
+            }
         }
+
+        
     }
 }
+
+

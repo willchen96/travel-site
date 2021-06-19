@@ -1,10 +1,12 @@
 import '../styles/styles.css'
 import MobileMenu from '../scripts/modules/MobileMenu.js'
 import ScrollReveal from '../scripts/modules/ScrollReveal.js'
+import StickyHeader from '../scripts/modules/StickyHeader.js'
 
 let mm = new MobileMenu;
 let scrollRevealFeatures = new ScrollReveal(document.querySelectorAll('.feature-item'), 0.25)
 let scrollRevealTestimonials = new ScrollReveal(document.querySelectorAll('.testimonial-item'), 0.25)
+let stickyheader = new StickyHeader
 
 if (module.hot) {
     module.hot.accept() //accept hot updates 
