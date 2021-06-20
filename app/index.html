@@ -16,7 +16,7 @@
       </div>
       <div class="site-header__menu-content">
         <div class="site-header__btn-container">
-          <a href="#" class="btn">Get in Touch</a>
+          <a href="#" class="btn modal__open">Get in Touch</a>
         </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
@@ -41,7 +41,7 @@
         <h1 class="large-hero__title">Your clarity.</h1>
         <h2 class="large-hero__subtitle">One trip away.</h2>
         <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-        <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+        <p><a href="#" class="btn btn--orange btn--large modal__open">Get Started Today</a></p>
       </div>
     </div>
   </div>
@@ -52,13 +52,14 @@
       <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       
       <div class="wrapper wrapper--medium wrapper--b-margin">
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">      </div>
+        <img sizes="(min-width: 970px) 976px, 100vw" class="lazyload" data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">      
+      </div>
       <div class="row row--gutters">
         <div class="row__medium-4-larger row__b-margin-until-medium">
           <picture>
             <source sizes="404px" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
             <source sizes="320px" srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)">
-            <img srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
+            <img class="lazyload" data-srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
           </picture>          
         </div>
         <div class="row__medium-8-smaller">
@@ -119,7 +120,7 @@
         <div class="row__large-4">
           <div class="testimonial-item hide">
             <div class="testimonial-item__image">
-              <img src="assets/images/testimonial-jane.jpg">
+              <img class="lazyload" data-src="assets/images/testimonial-jane.jpg">
             </div>
             <h3 class="testimonial-item__name">Jane Doe</h3>
             <h4 class="testimonial-item__subtitle">9 Time Escaper</h4>
@@ -129,7 +130,7 @@
         <div class="row__large-4">
           <div class="testimonial-item hide">
             <div class="testimonial-item__image">
-              <img src="assets/images/testimonial-john.jpg">
+              <img class="lazyload" data-src="assets/images/testimonial-john.jpg">
             </div>
             <h3 class="testimonial-item__name">John Smith</h3>
             <h4 class="testimonial-item__subtitle">4 Time Escaper</h4>
@@ -139,7 +140,7 @@
         <div class="row__large-4">
           <div class="testimonial-item testimonial-item--last hide">
             <div class="testimonial-item__image">
-              <img src="assets/images/testimonial-cat.jpg">
+              <img class="lazyload" data-src="assets/images/testimonial-cat.jpg">
             </div>
             <h3 class="testimonial-item__name">Cat McKitty</h3>
             <h3 class="testimonial-item__subtitle">6 Time Escaper</h3>
@@ -152,27 +153,10 @@
 
   <footer class="site-footer site-footer--blue">
     <div class="wrapper">
-      <p class="site-footer__text">Copyright &copy; 2019 Clear View Escapes. All rights reserved.</p><a href="#" class="btn btn--orange site-footer__button">Get in Touch</a>
+      <p class="site-footer__text">Copyright &copy; 2019 Clear View Escapes. All rights reserved.</p><a href="#" class="btn btn--orange site-footer__button modal__open">Get in Touch</a>
     </div>
   </footer>
-  <!-- Leave this commented out HTML here until you need it for an upcoming "modal" lesson
-  <div class="modal">
-    <div class="modal__inner">
-      <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
-      <div class="wrapper wrapper--narrow">
-        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
-      </div>
 
-      <div class="social-icons">
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
-      </div>
-    </div>
-    <div class="modal__close">X</div>
-  </div>
-  This is the end of the "modal" reference HTML -->
 <script src="bundled.js"></script>
 </body>
 </html>

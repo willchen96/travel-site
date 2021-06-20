@@ -1,0 +1,31 @@
+.social-icons {
+    width: 164px;
+    height: 164px;
+    display: flex;
+    
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @mixin atSmall {
+        width: 330px;
+    }
+
+
+    &__icon {
+        
+        background-color: $mainOrange;
+        height: 72px;
+        width: 72px;
+        display: flex;
+        margin-bottom: 20px;
+        
+        img {
+            color: $mainOrange;
+            margin: auto;
+            
+            
+        }
+    }
+    
+}
