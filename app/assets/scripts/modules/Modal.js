@@ -1,7 +1,6 @@
 export default class Modal {
     constructor() {
         this.injectHTML()
-        this.openBtns = document.querySelectorAll('.modal__open')
         this.closeIcon = document.querySelector('.modal__close')
         this.modal = document.querySelector('.modal')
         this.events()
@@ -29,13 +28,6 @@ export default class Modal {
     }
     
     events() {
-        this.openBtns.forEach(e => {
-            e.addEventListener('click', (e) => {
-                this.openModal()
-                e.preventDefault()
-            })
-        })
-        
         this.closeIcon.addEventListener('click', () => this.closeModal())
         window.addEventListener('keydown', (e) => this.escModal(e))
 
